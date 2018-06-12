@@ -1,0 +1,29 @@
+///*
+//    #DEFAULTS
+//*/
+//Spacing
+@function space($space, $default: 'base') {
+  @return map-get(map-get($spacing, $space), $default);
+}
+
+$spacing: (
+  site: (
+    base: 12px,
+    half: 6px,
+  ),
+  negative: (
+    base: -12px,
+    half: -6px,
+  ),
+);
+//Object Depth used to layer obecjts
+@function depth($depth, $default: 'base') {
+  @return map-get(map-get($depths, $depth), $default);
+}
+
+$depths: ( site: ( base: 1, aboveAll: 100, behind: -1, zero: 0, above: 10, plainCrazy: 999999));
+// GRID
+// Default breakpoints for s, m and l columns
+$grid-breakpoints: ( tablet: tablet, desktop: desktop, mobile: mobile, );
+$column-sizes: 8, 10, 12, 16.66667, 20, 25, 30, 33.33334, 40, 50, 58.33334, 60, 63.33334, 66.66667, 70, 75, 80, 88, 90, 100;
+$grid-position: (start: flex-start, center: center, end: flex-end, between: space-between, around: space-around);

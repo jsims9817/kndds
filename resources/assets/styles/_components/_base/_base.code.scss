@@ -1,0 +1,14 @@
+pre,
+code {
+  background: palette(site, content);
+  color: palette(site, light);
+  line-height: 1.4;
+  overflow: hidden;
+  padding: 0 space(site);
+  margin: 0 0 space(site);
+  vertical-align: middle;
+}
+
+code {
+  overflow: hidden;
+}

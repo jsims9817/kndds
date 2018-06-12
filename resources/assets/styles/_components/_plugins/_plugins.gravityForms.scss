@@ -1,0 +1,282 @@
+/* Default SVG spinner styles */
+
+.gform_ajax_spinner {
+  margin-left: 20px;
+  border: 4px solid rgba(palette(site, light), .3);
+  border-left: 4px solid palette(site, background);
+  animation: spinner 1.1s infinite linear;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+/* Reset for Gravity forms */
+
+.gform_heading,
+.gform_body,
+.gform_footer {
+  clear: both;
+  padding-bottom: space(site);
+}
+
+.gform_body {
+  padding: space(site) 0 0;
+}
+
+.gform_fields {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gfield {
+  clear: both;
+  margin-bottom: space(site);
+}
+
+.ginput_container {
+  span {
+    margin-bottom: space(site);
+  }
+  input,
+  select,
+  textarea {
+    @include font-size(size(site), 1);
+    &.large {
+      width: 100%;
+    }
+    &.medium {
+      width: 66%;
+    }
+    &.small {
+      width: 33%;
+    }
+  }
+  input,
+  textarea {
+    margin: 2px;
+  }
+}
+
+.gfield_label {
+  display: none;
+  padding-bottom: space(site);
+  .left_label & {
+    float: left;
+    width: 25%;
+  }
+  .right_label & {
+    float: right;
+    width: 25%;
+  }
+}
+
+.gfield_required {
+  padding-left: 5px;
+}
+
+////----- Checkboxes and Radios
+.gfield_checkbox,
+.gfield_radio {
+  list-style: none;
+  padding: 0;
+  input {
+    margin-right: space(site);
+    position: relative;
+    top: -1px;
+  }
+}
+
+.gfield_radio {
+  input {
+    margin-left: 2px;
+  }
+}
+
+////----- Section Break
+.gsection {
+  h2 {
+    border-bottom: 3px solid palette(site, dark);
+    padding-bottom: space(site);
+  }
+}
+
+////----- Page Break
+.gf_progressbar_wrapper {
+  padding-bottom: space(site);
+}
+
+.gf_progressbar {
+  background: palette(site, content);
+}
+
+.gf_progressbar_percentage {
+  background: palette(alert, error);
+  padding: 5px space(site);
+  text-align: right;
+}
+
+////----- Time Field
+.gfield_time_hour,
+.gfield_time_minute,
+.gfield_time_ampm {
+  display: inline-block;
+}
+
+.gfield_time_hour,
+.gfield_time_minute {
+  label {
+    display: block;
+  }
+}
+
+.gfield_time_ampm {
+  vertical-align: top;
+}
+
+////----- Validation and Errors
+.validation_error {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-bottom: space(site);
+}
+
+.gfield {
+  &.gfield_error {
+    background: palette(site, background);
+    margin-bottom: space(site);
+    padding-top: space(site);
+    label.gfield_label {
+      font-weight: 700;
+    }
+  }
+  .validation_message {
+    font-weight: 700;
+    margin-top: space(site);
+  }
+}
+
+.gform_validation_container {
+  display: none;
+}
+
+////----- CSS Ready Classes
+.ginput_full {
+  display: block;
+  input,
+  select,
+  textarea {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  label {
+    display: block;
+  }
+}
+
+.ginput_left {
+  float: left;
+  padding-right: space(site);
+  width: 50%;
+  input,
+  select,
+  textarea {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  label {
+    display: block;
+  }
+}
+
+.ginput_right {
+  float: right;
+  width: 50%;
+  input,
+  select,
+  textarea {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  label {
+    display: block;
+  }
+}
+
+.ginput_right {
+  float: right;
+  width: 50%;
+}
+
+//----- Layout Columns
+.gf_left_half {
+  clear: none;
+  float: left;
+  padding-right: space(site);
+  padding-bottom: space(site);
+  width: 50%;
+}
+
+.gf_right_half {
+  clear: none;
+  float: right;
+  padding-bottom: space(site);
+  width: 50%;
+}
+
+.gf_left_third {
+  clear: none;
+  float: left;
+  padding-right: space(site);
+  padding-bottom: space(site);
+  width: 33%;
+}
+
+.gf_middle_third {
+  clear: none;
+  float: left;
+  padding-right: space(site);
+  padding-bottom: space(site);
+  width: 34%;
+}
+
+.gf_right_third {
+  clear: none;
+  float: right;
+  padding-bottom: space(site);
+  width: 33%;
+}
+
+.gf_first_quarter {
+  clear: none;
+  float: left;
+  padding-right: space(site);
+  padding-bottom: space(site);
+  width: 25%;
+}
+
+.gf_second_quarter {
+  clear: none;
+  float: left;
+  padding-right: space(site);
+  padding-bottom: space(site);
+  width: 25%;
+}
+
+.gf_third_quarter {
+  clear: none;
+  float: left;
+  padding-bottom: space(site);
+  width: 25%;
+}
+
+.gf_fourth_quarter {
+  clear: none;
+  float: right;
+  padding-bottom: space(site);
+  width: 25%;
+}
+
+@include placeholder() {
+  text-align: center;
+}

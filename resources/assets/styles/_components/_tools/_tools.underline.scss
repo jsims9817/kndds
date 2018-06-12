@@ -1,0 +1,11 @@
+@mixin underline() {
+  &::after {
+    content: '';
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: space(negative);
+    left: space(site);
+    background: palette(site, content);
+  }
+}

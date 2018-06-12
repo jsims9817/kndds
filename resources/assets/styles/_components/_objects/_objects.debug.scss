@@ -1,0 +1,38 @@
+/*
+    #DEBUG
+*/
+
+.debug {
+  display: none;
+
+  &__environment {
+    background: palette(debug);
+    position: fixed;
+    bottom: 50%;
+    left: 0;
+    z-index: depth(site, aboveAll);
+    padding: space(site);
+    box-shadow: 0 0 10px 1px rgba(palette(site, dark), .3);
+
+    p {
+      color: palette(debug, text);
+      margin: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: -10px;
+      content: '';
+      height: 10px;
+      width: 100%;
+      left: 0;
+      background: repeating-linear-gradient(45deg, palette(debug, hateching), palette(debug, hateching) 10px, palette(debug) 10px, palette(debug) 20px);
+    }
+  }
+
+  &:hover {
+    .debug__environment {
+      opacity: 0;
+    }
+  }
+}

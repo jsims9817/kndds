@@ -1,0 +1,21 @@
+/*
+    #BUTTONS
+*/
+
+.btn,
+.gform_button {
+  @include button($fontSize: size(site), $defaultBackground: palette(site, content), $hoverBackground: palette(site, content), $defaultColour: palette(site, light), $hoverColour: palette(site, light), $padding: space(site), $margin: 0 auto);
+
+  max-width: 190px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+/**
+ * Fix a Firefox bug whereby `input type='submit'` gains 2px extra padding.
+ */
+
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}

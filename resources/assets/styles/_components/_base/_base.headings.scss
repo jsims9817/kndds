@@ -1,0 +1,36 @@
+/**
+  *   #HEADINGS
+  */
+
+/**
+ * Headings 1–6.
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+@include headings() {
+  font-weight: 400;
+}
+
+h1 {
+  @include font-size(size(headings, heading-size-1), 1.2);
+}
+
+h2 {
+  @include font-size(size(headings, heading-size-2), 1.2);
+}
+
+h3 {
+  @include font-size(size(headings, heading-size-3), 1.2);
+}
+
+h4 {
+  @include font-size(size(headings, heading-size-4), 1.2);
+}
+
+h5 {
+  @include font-size(size(headings, heading-size-4), 1.2);
+}
+
+h6 {
+  @include font-size(size(headings, heading-size-6), 1.2);
+}

@@ -1,0 +1,44 @@
+@mixin link-colors($base, $hover: false, $link: false, $visited: false, $active: false) {
+  color: $base;
+
+  &:link {
+    @if $link {
+      color: $link;
+    }
+
+    @else {
+      color: $base;
+    }
+  }
+
+  &:visited {
+    @if $visited {
+      color: $visited;
+    }
+
+    @else {
+      color: $base;
+    }
+  }
+
+  &:active {
+    @if $active {
+      color: $active;
+    }
+
+    @else {
+      color: $base;
+    }
+  }
+
+  /* Hover MUST be last in the list */
+  &:hover {
+    @if $hover {
+      color: $hover;
+    }
+
+    @else {
+      color: $base;
+    }
+  }
+}

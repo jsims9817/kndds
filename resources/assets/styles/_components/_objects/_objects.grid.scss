@@ -1,0 +1,99 @@
+/**
+  * +GRID
+  */
+
+// Container for each row
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 0 space(negative);
+
+  + .grid {
+    margin-top: 0;
+  }
+
+  &--nomargin {
+    margin: 0;
+
+    & > .col {
+      padding-left: 0;
+    }
+  }
+}
+
+// Alignement of items. Use with .grid
+@each $position, $value in $grid-position {
+  .grid-#{$position} {
+    justify-content: $value;
+  }
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @include mq($until: $value) {
+    @each $position, $value in $grid-position {
+      .grid-#{$position}-#{$breakpoint} {
+        justify-content: $value;
+      }
+    }
+  }
+}
+
+// Reversed row. Use with .grid
+.grid-reverse {
+  flex-direction: row-reverse;
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @include mq($until: $value) {
+    .grid-reverse-#{$breakpoint} {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// Global settings for columns
+.col {
+  padding-left: space(site);
+  flex-grow: 1;
+}
+
+// Different column sizes
+@each $size in $column-sizes {
+  $roundsize: floor($size);
+
+  .col-#{$roundsize} {
+    flex-basis: $size * 1%;
+    max-width: $size * 1%;
+  }
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @include mq($until: $value) {
+    @each $size in $column-sizes {
+      $roundsize: floor($size);
+
+      .col-#{$roundsize}-#{$breakpoint} {
+        flex-basis: $size * 1%;
+        max-width: $size * 1%;
+      }
+    }
+  }
+}
+
+// Align item to the top, center, or bottom
+@each $position, $value in $grid-position {
+  .col-#{$position} {
+    align-self: $value;
+  }
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @include mq($until: $value) {
+    @each $position, $value in $grid-position {
+      .col-#{$position}-#{$breakpoint} {
+        align-self: $value;
+      }
+    }
+  }
+}

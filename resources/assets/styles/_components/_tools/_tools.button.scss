@@ -1,0 +1,69 @@
+@mixin button($fontSize: 12px, $defaultBackground: #000, $defaultColour: #fff, $hoverBackground: #189FD8, $hoverColour: #fff, $padding: 6px, $margin: 0) {
+  @include font-size($fontSize);
+  @include link-colors($defaultColour);
+
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  overflow: visible;
+  padding: $padding;
+  background-color: $defaultBackground;
+  transition: all .3s ease-in;
+  position: relative;
+  margin: $margin;
+  width: 100%;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    background-color: $defaultBackground;
+  }
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    color: $hoverColour;
+    background-color: $hoverBackground;
+  }
+
+  &--post,
+  &--download {
+    width: 100%;
+    max-width: 100%;
+    padding: 9px;
+
+    @include mq($from: tablet) {
+      font-size: 14px;
+      padding: 14px;
+      width: 150px;
+      max-width: inherit;
+      margin-bottom: 0;
+    }
+  }
+
+  &--download {
+    @include link-colors(palette(site, brand), palette(site, light));
+
+    float: right;
+
+    &:link,
+    & {
+      background-color: palette(site, light);
+      border: 1px solid palette(site, brand);
+    }
+
+    &:hover {
+      background-color: palette(site, brand);
+    }
+  }
+
+  &--outline {
+    @include link-colors(palette(site, brand));
+
+    background: palette(site, light);
+    border: solid 1px palette(site, brand);
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+  @include clearFix();
+
+  position: fixed;
+  width: 100%;
+  z-index: depth(site, aboveAll);
+  top: 0;
+  left: 0;
+
+  &.slideIn {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-name: slideInDown;
+  }
+
+  &.slideOut {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-name: slideOutUp;
+  }
+}

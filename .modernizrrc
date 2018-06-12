@@ -1,0 +1,14 @@
+{
+  "minify": false,
+  "options": [
+    "prefixed",
+    "prefixedCSS",
+    "prefixedCSSValue",
+    "setClasses",
+    "addTest",
+    "html5printshiv",
+    "testProp",
+    "fnBind"
+  ],
+  "feature-detects": []
+}

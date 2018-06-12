@@ -1,0 +1,54 @@
+@mixin clickInput($borderRadius: 50%, $containerWidth: 2px, $containerColour: #000, $containerBackgroundColour: #fff, $containerSize: 15px, $innerColour: #000, $innerWidth: 7px, $innerPosition: 4px, $marginBottom: 12px) {
+  position: relative;
+  margin-bottom: $marginBottom;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: depth(site, zero);
+    opacity: 0;
+    visibility: hidden;
+    width: auto;
+  }
+
+  label {
+    padding-left: space(site, double);
+    pointer-events: none;
+  }
+
+  &::after,
+  &::before {
+    border-radius: $borderRadius;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    transition: all ease .3s;
+    display: block;
+    z-index: depth(site);
+  }
+
+  &::before {
+    width: $containerSize;
+    height: $containerSize;
+    border: solid $containerWidth $containerColour;
+    background: $containerBackgroundColour;
+  }
+
+  &::after {
+    background: $innerColour;
+    width: $innerWidth;
+    height: $innerWidth;
+    top: $innerPosition;
+    left: $innerPosition;
+    z-index: depth(site, above);
+    transform: scale(0);
+  }
+
+  &.active {
+    &::after {
+      transform: scale(1);
+    }
+  }
+}

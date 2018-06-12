@@ -1,0 +1,4 @@
+@mixin colorOpacity($object: background, $colour: #000, $opacity: 1) {
+  #{$object}: $colour;
+  #{$object}: rgba($colour, $opacity);
+}

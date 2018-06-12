@@ -1,0 +1,71 @@
+/*
+    #TABLE
+*/
+$tableBorder: 1px solid palette(site, content);
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+  border: $tableBorder;
+  border-bottom: none;
+  margin: space(site) 0;
+}
+
+th {
+  text-align: left;
+}
+
+tr {
+  border: none;
+
+  &:nth-child(even) {
+    background: rgba(palette(site, content), .05);
+  }
+}
+
+th,
+td {
+  border: none;
+  line-height: inherit;
+  border-right: $tableBorder;
+  border-bottom: $tableBorder;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+th {
+  vertical-align: bottom;
+  padding: space(site, half);
+}
+
+td {
+  vertical-align: middle;
+  padding: space(site, half);
+}
+
+thead {
+  border: none;
+
+  th,
+  td {
+    background: palette(site, background);
+    color: palette(site, light);
+    border-right: $tableBorder;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+tbody {
+  border: none;
+}
+
+tfoot {
+  border: none;
+}

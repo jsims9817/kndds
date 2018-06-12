@@ -1,0 +1,9 @@
+/*
+    #LINKS
+*/
+
+a {
+  @include link-colors(palette(links), palette(links, hover), palette(links), palette(links, visited), palette(links, active));
+
+  text-decoration: none;
+}

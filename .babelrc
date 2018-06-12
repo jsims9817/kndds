@@ -1,0 +1,12 @@
+{
+    "presets": [
+      ["env", {
+        "targets": {
+          "browsers": ["> 1% in GB"]
+      },
+      "debug": false
+      }]
+  ],
+  "ignore": ["resources/assets/scripts/util/Router.js"]
+}
+

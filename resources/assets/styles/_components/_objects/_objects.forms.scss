@@ -1,0 +1,132 @@
+/*
+    #FORMS
+*/
+
+%input {
+  @include font-size(size(site), 1.3);
+
+  background: none;
+  color: palette(site, content);
+  width: 100%;
+  padding: space(site, half);
+  border-radius: 0;
+  border: solid palette(site, background) 2px;
+  margin-bottom: space(site, half);
+  display: block;
+  font-weight: normal;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    width: auto;
+  }
+}
+
+input {
+  &[type='text'],
+  &[type='url'],
+  &[type='tel'],
+  &[type='number'],
+  &[type='color'],
+  &[type='email'],
+  &[type='password'],
+  &[type='search'],
+  &[type='text'],
+  &[type='radio'],
+  &[type='checkbox'] {
+    @extend %input;
+  }
+}
+
+form {
+  display: block;
+}
+
+select {
+  @extend %input;
+}
+
+textarea {
+  @extend %input;
+}
+
+.input {
+  &__text,
+  &__textarea {
+    position: relative;
+    background: none;
+    width: 100%;
+    border: none;
+    outline: none;
+
+    label {
+      color: palette(site);
+      display: block;
+      transition: all .5s;
+      pointer-events: none;
+      position: absolute;
+      left: 5px;
+      top: .3em;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: palette(site, background);
+      bottom: 0;
+      left: 0;
+      transition: all .7s;
+      transform: scaleX(0);
+    }
+
+    &.active {
+      label {
+        @include font-size(size(site, normal), 1);
+
+        transform: translateY(-20px);
+      }
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__select__inner {
+    position: relative;
+    border: solid 1px palette(site, content);
+    padding: space(site, third);
+
+    select {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: space(site, half);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid palette(site, content);
+      transform: translate3d(0, -50%, 0);
+    }
+  }
+
+  &__radio {
+    @include clickInput($borderRadius: 50%, $containerWidth: 2px, $containerColour: palette(site, content), $containerBackgroundColour: palette(site, light), $containerSize: 15px, $innerColour: palette(site, content), $innerWidth: 7px, $innerPosition: 4px, $marginBottom: space(site));
+  }
+
+  &__checkbox {
+    @include clickInput($borderRadius: 0, $containerWidth: 2px, $containerColour: palette(site, content), $containerBackgroundColour: palette(site, light), $containerSize: 15px, $innerColour: palette(site, content), $innerWidth: 7px, $innerPosition: 4px, $marginBottom: space(site));
+  }
+}

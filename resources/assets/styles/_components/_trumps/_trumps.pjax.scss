@@ -1,0 +1,15 @@
+html.pjax_enabled {
+  .nav .sub-menu.active {
+    transform: none;
+    transition: none;
+  }
+  .active .plus--icon::after {
+    transition: none;
+  }
+  .siteload.loaded .sidebar {
+    transition: none;
+  }
+  .siteload.loaded .header {
+    transition: none;
+  }
+}

@@ -1,0 +1,38 @@
+/*
+    #ALERTS
+*/
+
+.alert {
+  display: block;
+  clear: both;
+  padding: space(site);
+  margin: space(site) 0 0;
+  list-style: none;
+  border-left: 5px solid palette(alert);
+  margin-top: 0;
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &__info,
+  &__information {
+    @include colorOpacity(background, palette(alert), .8);
+  }
+
+  &__warning {
+    @include colorOpacity(background, palette(alert, warning), 1);
+  }
+
+  &__error {
+    @include colorOpacity(background, palette(alert, error), .8);
+  }
+
+  &__success {
+    @include colorOpacity(background, palette(alert, success), .8);
+  }
+}

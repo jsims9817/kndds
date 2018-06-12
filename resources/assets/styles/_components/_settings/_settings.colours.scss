@@ -1,0 +1,39 @@
+///*
+//*/
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}
+
+$palettes: (
+  site: (
+    base:       #000000,
+    dark:       #000000,
+    light:      #ffffff,
+    background: #ffffff,
+    content:    #000000,
+    brand:      #000000,
+  ),
+  links: (
+    base:       #000000,
+    link:       #000000,
+    hover:      #006a83,
+    active:     #000000,
+    visited:    #000000,
+  ),
+  nav: (
+    base:       #ffffff,
+    hover:      #ffffff,
+    active:     #ffffff,
+  ),
+  debug: (
+    base:       #333f4d,
+    hateching:  #ffcc00,
+    text:       #ffffff,
+  ),
+  alert: (
+    base:       #0092d1,
+    warning:    #ed9f2d,
+    error:      #cc0000,
+    success:    #84bf41,
+  ),
+);

@@ -1,0 +1,43 @@
+///*
+//    #FONTS
+//*/
+@function size($size, $item: 'base') {
+  @return map-get(map-get($sizes, $size), $item);
+}
+
+/* Font Sizes */
+$base-font-size: 16px;
+$base-line-height: $base-font-size;
+$sizes: (
+  headings: (
+    base: 22px,
+    heading-size-1: 30px,
+    heading-size-2: 24px,
+    heading-size-3: 22px,
+    heading-size-4: 20px,
+    heading-size-5: 18px,
+    heading-size-6: 16px,
+  ),
+  site: (
+    base:           16px,
+    double:         32px,
+    triple:         48px,
+    half:           8px,
+    brand:          24px,
+    normal:         12px,
+    smallest:       9px,
+  ),
+);
+$sanSerif: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$serif: Georgia, Times, 'Times New Roman', serif;
+
+//reuseable font groups
+%sanSerif {
+  font-family: $sanSerif;
+  font-weight: normal;
+}
+
+%serif {
+  font-family: $serif;
+  font-weight: normal;
+}

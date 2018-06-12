@@ -1,0 +1,21 @@
+// Welcome To Legion theme
+
+Step 1) Add legion theme to your wordpress themes folder
+
+Step 2) Using the terminal, navigate to the legion folder.
+        cd wp-content/themes/legion
+
+Step 3) Run composer install
+
+Step 4) Run yarn install
+
+Step 5) Go to the config.json fule in the resources>assets folder and change the 
+        dev.url to whatever the project you are working on is and save.
+
+Step 6) Run yarn start
+
+// From here your project should compile and you will be able to see your changes via your browser
+
+To view the project using the dev URL please run: yarn build:production
+
+Happy Legioning!!

@@ -1,0 +1,86 @@
+.slide {
+  &__menu,
+  &__content {
+    transition: transform ease .3s;
+
+    .main,
+    .footer,
+    .header {
+      transition: transform ease .3s;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: depth(site);
+    height: 100%;
+    transform: translate3d(-240px, 0, 0);
+    background-color: palette(site, background);
+    width: 240px;
+
+    a {
+      display: block;
+      padding: space(site);
+      text-align: center;
+
+      &:hover,
+      &.active {
+        background-color: palette(site, background);
+      }
+    }
+
+    &.active {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .burger {
+      float: right;
+    }
+  }
+
+  &__content {
+    &.active {
+      transform: translate3d(240px, 0, 0);
+
+      .main,
+      .footer,
+      .header {
+        filter: blur(3px);
+      }
+    }
+  }
+
+  &__nav {
+    padding-top: 45px;
+    margin: 0;
+
+    li {
+      list-style: none;
+      text-align: center;
+
+      a {
+        @include link-colors(palette(site, light));
+      }
+    }
+  }
+
+  &__cover {
+    position: absolute;
+    z-index: depth(site, aboveAll);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(palette(site, dark), .3);
+    transition: all ease .3s;
+    opacity: 0;
+    pointer-events: none;
+
+    .active & {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
