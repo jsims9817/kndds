@@ -12,7 +12,7 @@
       </header>
 
       <main id="main" class="main">
-        <div class="main__inner wrapper">
+        <div class="main__inner">
           @yield('content')
         </div>
       </main>

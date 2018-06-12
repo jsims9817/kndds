@@ -41,3 +41,61 @@ $serif: Georgia, Times, 'Times New Roman', serif;
   font-family: $serif;
   font-weight: normal;
 }
+
+@font-face {
+    font-family: 'abhaya_librebold';
+    src: url('abhayalibre-bold-webfont.woff2') format('woff2'),
+         url('abhayalibre-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansbold';
+    src: url('nunitosans-bold-webfont.woff2') format('woff2'),
+         url('nunitosans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansbold_italic';
+    src: url('nunitosans-bolditalic-webfont.woff2') format('woff2'),
+         url('nunitosans-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansitalic';
+    src: url('nunitosans-italic-webfont.woff2') format('woff2'),
+         url('nunitosans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansregular';
+    src: url('nunitosans-regular-webfont.woff2') format('woff2'),
+         url('nunitosans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3 {
+  font-family: 'abhaya_librebold';
+}
+
+h4, h5, h6 {
+  font-family: 'nunito_sansbold';
+  font-weight: bold;
+}
+
+p {
+  font-family: 'nunito_sansregular';
+}
