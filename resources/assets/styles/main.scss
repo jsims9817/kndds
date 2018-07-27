@@ -79,3 +79,60 @@
 body {
   background: #fff;
 }
+
+.t1_1 {
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  .background {
+    background-position: center right;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    top: 0px;
+    right: 0px;
+  }
+  .triangle {
+    position: absolute;
+    left: -50%;
+    height: 100%;
+    top: -30%;
+    background: #2F0431;
+  }
+  .shade {
+    background-position: center right;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACT */

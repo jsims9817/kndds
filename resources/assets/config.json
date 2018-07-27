@@ -8,9 +8,9 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/legion",
-  "devUrl": "http://middelton.test/",
-  "proxyUrl": "http://localhost:3000",
+  "publicPath": "/wp-content/themes/kndds",
+  "devUrl": "http://kndds.test/",
+  "proxyUrl": "http://localhost:3010",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

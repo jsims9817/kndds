@@ -43,27 +43,27 @@ $serif: Georgia, Times, 'Times New Roman', serif;
 }
 
 @font-face {
-    font-family: 'abhaya_librebold';
-    src: url('abhayalibre-bold-webfont.woff2') format('woff2'),
-         url('abhayalibre-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
     font-family: 'nunito_sansbold';
-    src: url('nunitosans-bold-webfont.woff2') format('woff2'),
-         url('nunitosans-bold-webfont.woff') format('woff');
+    src: url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-bold-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'nunito_sansbold_italic';
-    src: url('nunitosans-bolditalic-webfont.woff2') format('woff2'),
-         url('nunitosans-bolditalic-webfont.woff') format('woff');
+    font-family: 'nunito_sansextralight';
+    src: url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-extralight-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nunito_sansextralight_italic';
+    src: url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-extralightitalic-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-extralightitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -71,8 +71,8 @@ $serif: Georgia, Times, 'Times New Roman', serif;
 
 @font-face {
     font-family: 'nunito_sansitalic';
-    src: url('nunitosans-italic-webfont.woff2') format('woff2'),
-         url('nunitosans-italic-webfont.woff') format('woff');
+    src: url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-italic-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -80,15 +80,25 @@ $serif: Georgia, Times, 'Times New Roman', serif;
 
 @font-face {
     font-family: 'nunito_sansregular';
-    src: url('nunitosans-regular-webfont.woff2') format('woff2'),
-         url('nunitosans-regular-webfont.woff') format('woff');
+    src: url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-regular-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/kndds/resources/assets/fonts/nunitosans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'jenna_sueregular';
+    src: url('/wp-content/themes/kndds/resources/assets/fonts/jennasue-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/kndds/resources/assets/fonts/jennasue-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 h1, h2, h3 {
-  font-family: 'abhaya_librebold';
+  font-family: 'nunito_sansextralight';
+  font-weight: 100;
 }
 
 h4, h5, h6 {
@@ -96,6 +106,10 @@ h4, h5, h6 {
   font-weight: bold;
 }
 
-p {
+p, a, span, input, li {
   font-family: 'nunito_sansregular';
+}
+
+.jenna {
+  font-family: 'jenna_sueregular';
 }
